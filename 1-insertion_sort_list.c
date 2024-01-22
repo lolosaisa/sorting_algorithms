@@ -33,7 +33,7 @@ void insertion_sort_list(listint_t **list)
 	/* i is used for iteration, j for comparing and inserting current element
 	 * in the correct position, and tmp is for holding the element temporarily
 	 */
-	listint_t i, j, temp;
+	listint_t *i, *j, *temp;
 
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
@@ -43,7 +43,7 @@ void insertion_sort_list(listint_t **list)
 		j = i->prev;
 		while (i != NULL && i->n < j->n)
 		{
-			swap_nodes((list, &j, i));
+			swap_nodes(list, &j, i);
 			print_list((const listint_t *)*list);
 		}
 	}
