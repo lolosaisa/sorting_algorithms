@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "sort.h"
 
 /**
@@ -13,23 +14,31 @@ void bubble_sort(int *array, size_t size)
 	unsigned int i = 0;
 	unsigned int j = 0;
 	unsigned int temp;
+	bool bubbly = false;
+
 
 	if (array == NULL || size < 2)
 	{
 		return;
 	}
 
-	for (i = 0; i < size - 1; i++)
+	do
 	{
-		for (j = 0; j < size - i - 1; j++)
+		bubbly = false;
+		for (i = 0; i < size - 1; i++)
 		{
-			if (array[j] > array[j + 1])
+			for (j = 0; j < size - i - 1; j++)
 			{
-				temp = array[j];
-				array[j] = array[j + 1];
-				array[j + 1] = temp;
-				print_array(array, size);
+				if (array[j] > array[j + 1])
+				{
+					temp = array[j];
+					array[j] = array[j + 1];
+					array[j + 1] = temp;
+					print_array(array, size);
+					bubbly = true;
+				}
 			}
 		}
-	}
+		size --;
+	} while (bubbly);
 }
