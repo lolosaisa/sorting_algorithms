@@ -22,9 +22,9 @@ void bubble_sort(int *array, size_t size)
 		return;
 	}
 
-	do
-	{
+	do {
 		bubbly = false;
+
 		for (i = 0; i < size - 1; i++)
 		{
 			for (j = 0; j < size - i - 1; j++)
@@ -39,6 +39,6 @@ void bubble_sort(int *array, size_t size)
 				}
 			}
 		}
-		size --;
+		size--;
 	} while (bubbly);
 }
