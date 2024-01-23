@@ -30,7 +30,7 @@ void shell_sort(int *array, size_t size)
 	k = 1;
 
 	/*knuth sequence generating*/
-	while (k <= size / 3)
+	while (k <= size / 4)
 	{
 		k = 3 * k + 1;
 	}
