@@ -49,8 +49,8 @@ void shell_sort(int *array, size_t size)
 			array[j + k] = idx;
 		}
 		/*knuth sequence increment*/
-		k = (k - 1) / 3;
 		print_array(array, size);
+		k = (k - 1) / 3;
 	}
 
 }
