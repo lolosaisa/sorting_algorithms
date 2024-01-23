@@ -40,7 +40,7 @@ void selection_sort(int *array, size_t size)
 				swapper = true;
 			}
 		}
-		if (swapper && min_idx != i)
+		if (swapper)
 		{
 			swap_elements(&array[min_idx], &array[i]);
 			print_array(array, size);
