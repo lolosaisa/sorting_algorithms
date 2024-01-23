@@ -9,6 +9,7 @@
 void swap_elements(int *x, int *y)
 {
 	int temp;
+
 	temp = *x;
 	*x = *y;
 	*y = temp;
@@ -24,18 +25,22 @@ void swap_elements(int *x, int *y)
 void selection_sort(int *array, size_t size)
 {
 	unsigned int i, j, min_idx;
+	bool swapper;
 
 	for (i = 0; i < size -  1; i++)
 	{
 		min_idx = i;
+		swapper = false;
+
 		for (j = i + 1; j < size; j++)
 		{
-			if(array[j] < array[min_idx])
+			if (array[j] < array[min_idx])
 			{
 				min_idx = j;
+				swapper = true;
 			}
 		}
-		if (min_idx != i)
+		if (swapper && min_idx != i)
 		{
 			swap_elements(&array[min_idx], &array[i]);
 			print_array(array, size);
