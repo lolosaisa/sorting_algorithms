@@ -65,3 +65,24 @@ void quick_sort(int *array, size_t size)
 		return;
 	lomuto(array, size, 0, size - 1);
 }
+
+/**
+ * lomuto_sort - Implements the recursion after the first partition
+ * @array: an array of integers to sort
+ * @size: the size of the array
+ * @left: the starting index of the array partition order
+ * @right: the ending index
+ *
+ * Description: uses lomuto
+ */
+void lomuto_sort(int *array, size_t size, int left, int right)
+{
+	int part;
+
+	if (right - left > 0)
+	{
+		part = lomuto(array, size, left, right);
+		lomuto_sort(array, size, left, part - 1);
+		lomuto_sort(array, size, part + 1, right);
+	}
+}
