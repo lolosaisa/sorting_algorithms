@@ -41,10 +41,11 @@ void insertion_sort_list(listint_t **list)
 	{
 		temp = i->next;
 		j = i->prev;
-		while (i != NULL && i->n < j->n)
+		while (j != NULL && i->n < j->n)
 		{
 			swap_nodes(list, &j, i);
 			print_list((const listint_t *)*list);
+			j = i->prev;
 		}
 	}
 }
