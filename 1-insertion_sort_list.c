@@ -30,7 +30,8 @@ void swap_nodes(listint_t **h, listint_t **n1, listint_t *n2)
 
 void insertion_sort_list(listint_t **list)
 {
-	/* i is used for iteration, j for comparing and inserting current element
+	/*
+	 * i is used for iteration, j for comparing and inserting current element
 	 * in the correct position, and tmp is for holding the element temporarily
 	 */
 	listint_t *i, *j, *temp;
