@@ -3,6 +3,7 @@
 int lomuto(int *array, size_t size, int left, int right);
 void swap_ints(int *a, int *b);
 void quick_sort(int *array, size_t size);
+void lomuto_sort(int *array, size_t size, int left, int right);
 /**
  * lomuto - Function that partitions an array into sub arrays according
  * to the lomuto partition scheme (last element as pivot)
@@ -30,7 +31,7 @@ int lomuto(int *array, size_t size, int left, int right)
 			start++;
 		}
 	}
-	if (array[start] > *pivot)
+	if (array[start] != *pivot)
 	{
 		swap_ints(array + start, pivot);
 		print_array(array, size);

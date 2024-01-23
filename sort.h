@@ -42,5 +42,6 @@ void selection_sort(int *array, size_t size);
 int lomuto(int *array, size_t size, int left, int right);
 void swap_ints(int *a, int *b);
 void quick_sort(int *array, size_t size);
+void lomuto_sort(int *array, size_t size, int left, int right);
 
 #endif
