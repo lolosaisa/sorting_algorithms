@@ -57,3 +57,7 @@ void swap_ints(int *a, int *b)
  */
 void quick_sort(int *array, size_t size)
 {
+	if (array == NULL || size < 2)
+		return;
+	lomuto(array, size, 0, size - 1);
+}
